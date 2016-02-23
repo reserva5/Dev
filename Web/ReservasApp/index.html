@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Reserva5</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="Content/grayscale.css" rel="stylesheet">
+    <link href="Content/toastr.css" rel="stylesheet" />
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation" data-ng-controller="NavCtrl">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top" data-ng-class="getClass('/home')">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Inicio</span>
+                </a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <!--<li>
+                        <a class="page-scroll" href="#" data-ng-class="getClass('/todos')">Mis Complejos</a>
+                    </li>-->
+                    <li data-ng-controller="LoginCtrl">
+                        <a class="btn brand-heading" href="#" ng-click="login()">Login</a>
+                    </li>
+                    <!--<li data-ng-controller="LoginCtrl" data-ng-if="auth.profile.nickname" data-ng-cloak>
+                        <span class="navbar-text nofloat">Bienvenido, {{auth.profile.nickname}}</span>
+                        <a class="btn brand-heading" href="#" ng-click="logout()">/ Logout</a>
+                    </li>-->
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <img src="img/vp-logo.png" width="200" height="200" />
+                        <h1 class="brand-heading">Reserva5</h1>
+                        <p class="intro-text">Tu sitio de reserva de canchas. <br>Un sitio creado por 5Latins.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>¿Qué es Reserva5?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie justo nec purus tincidunt, eget mollis tellus lacinia. Phasellus massa tellus, porttitor vitae pharetra eu, tempor quis urna.</p>
+                <p>Aenean in sapien dignissim dolor interdum vulputate in a eros. Donec ultrices sit amet tellus a ullamcorper.</p>
+                <p>Nullam consectetur semper tellus, vel pulvinar odio rutrum in.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Download Section -->
+    <!--<section id="vacations" class="content-section text-center">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>My Vacations</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam molestie justo nec purus tincidunt, eget mollis tellus lacinia..</p>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- Contact Section -->
+    <!--<section id="settings" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Start Bootstrap</h2>
+                <p>Feel free to email us to provide some feedback on our templates, give us suggestions for new templates and themes, or to just say hello!</p>
+                <p>
+                    <a href="mailto:feedback@startbootstrap.com">feedback@startbootstrap.com</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    </li>
+                    <li>
+                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>-->
+    <!-- Map Section -->
+    <!--<div id="map"></div>-->
+
+    <div data-ng-view class="reveal-animation"></div>
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Reserva5</p>
+        </div>
+    </footer>
+
+    <!-- Auth dialog -->
+    <!--<div class="modal fade" data-auth-dialog data-ng-controller="LoginCtrl" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="inputUser" class="col-lg-2 control-label">Usuario</label>
+                            <div class="col-lg-10">
+                                <input type="text" class="form-control" id="inputUser" placeholder="Usuario" data-ng-model="userName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-lg-2 control-label">Contraseña</label>
+                            <div class="col-lg-10">
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Contraseña" data-ng-model="password" data-on-enter="signIn()" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-offset-2 col-lg-10">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" data-ng-model="rememberMe"> Recuerda me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-ng-click="cancel()">Cancelar</button>
+                    <button type="button" class="btn btn-primary" data-ng-click="signIn()">Sign In</button>
+                </div>
+            </div><!-- /.modal-content -->
+        <!--</div><!-- /.modal-dialog -->
+    <!--</div><!-- /.modal -->
+
+
+    <!-- jQuery -->
+    <script src="scripts/jquery-1.9.1.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="scripts/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="scripts/jquery.easing.min.js"></script>
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="scripts/grayscale.js"></script>
+    <script src="scripts/html5shiv-printshiv.js"></script>
+    <script src="scripts/html5shiv.js"></script>
+
+    <!--Angular-->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-animate.js"></script>
+    <!-- We use client cookies to save the user credentials -->
+    <!--<script src="//code.angularjs.org/1.2.16/angular-cookies.min.js"></script>-->
+    <script src="scripts/angular-cookies.js"></script>
+    <script src="scripts/angular-aria.js"></script>
+    <script src="scripts/angular-loader.js"></script>
+    <script src="scripts/angular-message-format.js"></script>
+    <script src="scripts/angular-messages.js"></script>
+    <script src="scripts/angular-sanitize.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-route.js"></script>
+
+    <script src="scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="scripts/modernizr-2.8.3.js"></script>
+    <script src="scripts/toastr.js"></script>
+    <script src="scripts/respond.js"></script>
+
+    <script src="App/http-auth-interceptor.js"></script>
+    <script src="App/interceptors.js"></script>
+    <script src="App/services.js"></script>
+    <script src="App/resources.js"></script>
+    <script src="App/directives.js"></script>
+    <script src="App/controllers.js"></script>
+    <script src="App/main.js"></script>
+
+    <!-- Auth0 Lock script and AngularJS module -->
+    <script src="//cdn.auth0.com/js/lock-8.2.min.js"></script>
+    <!-- angular-jwt and angular-storage -->
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-storage/master/dist/angular-storage.js"></script>
+    <script type="text/javascript" src="//cdn.rawgit.com/auth0/angular-jwt/master/dist/angular-jwt.js"></script>
+
+    <script src="//cdn.auth0.com/w2/auth0-angular-4.js"> </script>
+
+    <!-- Setting the right viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</body>
+</html>
